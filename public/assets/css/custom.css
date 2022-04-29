@@ -1,0 +1,90 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+.main {
+  position: absolute;
+  background-image: url("/images/bgLARGE.png");
+
+  /* Full height */
+  min-height: calc(100vh);
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar-brand img {
+  height: 70px;
+}
+
+#navbarNav a {
+  color: white;
+}
+
+#navbarNav a:hover {
+  text-decoration: none;
+}
+
+.staked-nft {
+  height: 250px;
+}
+
+.btn-connect {
+  background-color: #fa05a0;
+  color: white !important;
+  outline-style: solid;
+  outline-color: #fa05a0;
+  border: 2px solid black;
+  transform: scale(1);
+  transition: transform .5s;
+}
+
+.btn-connect:hover {
+  transform: scale(1.1);
+}
+
+.stake-bar h4 {
+  display: inline;
+}
+
+.stake-bar {
+  padding: 20px;
+  background: rgba(100, 100, 100, 0.3);
+  border-radius: 10px;
+}
+
+.pb-line {
+  border-bottom: 2px solid grey;
+}
+
+.unstaked-card {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.unselected-card {
+  border: 2px solid grey;
+}
+
+.selected-card {
+  border: 2px solid rgb(220, 120, 23);
+}
+
+.full-width {
+  width: 100%
+}
+
+.ant-spin-nested-loading > div > .ant-spin {
+  max-height: calc(100vh) !important;
+}
+
+/*.container h1, h2, h3, h4, h5, h6 {*/
+/*  color: white !important;*/
+/*}*/
+
+/*p {*/
+/*  color: white !important;*/
+/*}*/
