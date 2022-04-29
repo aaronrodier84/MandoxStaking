@@ -77,8 +77,8 @@ contract MandoXStaking is Ownable, IERC721Receiver, Pausable {
         uint256 lockTime = 0;
         if (tier == 30) {
             lockTime = block.timestamp + 30 minutes;
-        } else if (tier == 60) {
-            lockTime = block.timestamp + 60 minutes;
+        } else if (tier == 45) {
+            lockTime = block.timestamp + 45 minutes;
         } else if (tier == 90) {
             lockTime = block.timestamp + 90 minutes;
         } else {
