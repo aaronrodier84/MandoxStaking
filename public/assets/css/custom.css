@@ -5,7 +5,8 @@ body, html {
 }
 .main {
   position: absolute;
-  background-image: url("/images/bgLARGE.png");
+  /*background-image: url("/images/bgLARGE.png");*/
+  background: linear-gradient(#000000, #230820);
 
   /* Full height */
   min-height: calc(100vh);

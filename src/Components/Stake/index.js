@@ -28,7 +28,7 @@ function Stake({wallet, contract, nftContract, setIsLoading}) {
   const [unstakeAllFlag, setUnstakeAllFlag] = useState(false);
   const [stake30AllFlag, setStake30AllFlag] = useState(false);
   const [stake45AllFlag, setStake45AllFlag] = useState(false);
-  const [stake90AllFlag, setStake90AllFlag] = useState(false);
+  const [stake60AllFlag, setStake60AllFlag] = useState(false);
   const [tier, setTier] = useState(30);
   const [updatedStakeContract, setUpdatedStakeContract] = useState(false);
   const [stakedNFT, setStakedNFT] = useState([]);
@@ -267,7 +267,7 @@ function Stake({wallet, contract, nftContract, setIsLoading}) {
     } else if (tier === 45) {
       setStake45AllFlag(!stake45AllFlag);
     } else {
-      setStake90AllFlag(!stake90AllFlag);
+      setStake60AllFlag(!stake60AllFlag);
     }
     setStakedNFT(_stakedNFT);
     setStatusChanged(!statusChanged);
@@ -444,16 +444,16 @@ function Stake({wallet, contract, nftContract, setIsLoading}) {
                   )
                 }
                 {
-                  stakedNFT.filter(each => each.tier === 90).length > 0 && (
+                  stakedNFT.filter(each => each.tier === 60).length > 0 && (
                     <div className="row mt-3">
                       <div className="col-md-10 text-left">
 
-                        <h4>90 Days:</h4>
+                        <h4>60 Days:</h4>
 
                         <div className="row">
                           {
                             stakedNFT.map((nft, index) => {
-                              if (nft.tier === 90) {
+                              if (nft.tier === 60) {
                                 return (
                                   <div className="col-md-3 text-left" key={index}>
                                     <img
@@ -478,11 +478,11 @@ function Stake({wallet, contract, nftContract, setIsLoading}) {
                       </div>
                       <div className="col-md-2">
                         <a className="btn btn-connect full-width"
-                           onClick={() => selectAllStakedNFT(90)}>{unstakeAllFlag ? "Deselect All" : "Select All"}</a>
+                           onClick={() => selectAllStakedNFT(60)}>{unstakeAllFlag ? "Deselect All" : "Select All"}</a>
                         <a className="btn btn-connect full-width mt-3"
-                           onClick={() => claimRewards(90)}>Claim Only</a>
+                           onClick={() => claimRewards(60)}>Claim Only</a>
                         <a className="btn btn-connect full-width mt-3"
-                           onClick={() => claimRewards(90, true)}>Claim With Unstake</a>
+                           onClick={() => claimRewards(60, true)}>Claim With Unstake</a>
                       </div>
                     </div>
                   )
@@ -541,7 +541,7 @@ function Stake({wallet, contract, nftContract, setIsLoading}) {
                         onChange={(e) => setTier(parseInt(e.target.value))}>
                   <option value="30">30 Days</option>
                   <option value="45">45 Days</option>
-                  <option value="90">90 Days</option>
+                  <option value="60">60 Days</option>
                 </select>
 
                 <a className="ml-auto mr-auto btn btn-connect full-width mt-4" onClick={() => stakeNFTs()}>Stake</a>

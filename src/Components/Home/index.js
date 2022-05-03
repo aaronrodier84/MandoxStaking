@@ -55,8 +55,8 @@ function Home({wallet, contract, nftContract}) {
         <div className="offset-md-1 col-md-4 stake-bar">
           <h4>Expected Rewards</h4>
           <div className="pl-2 mt-3 pb-3 pb-line">Daily Rewards for 30 days: 1.5B MandoX</div>
-          <div className="pl-2 mt-3 pb-3 pb-line">Daily Rewards for 60 days: 3B MandoX</div>
-          <div className="pl-2 mt-3 pb-3 pb-line">Daily Rewards for 90 days: 10B MandoX</div>
+          <div className="pl-2 mt-3 pb-3 pb-line">Daily Rewards for 45 days: 3B MandoX</div>
+          <div className="pl-2 mt-3 pb-3 pb-line">Daily Rewards for 60 days: 10B MandoX</div>
           <div className="pl-2 pt-3">Other Rewards Coming Soon</div>
         </div>
         <div className="offset-md-2 col-md-4 stake-bar">

@@ -441,7 +441,7 @@
       "inputs":[
 
       ],
-      "name":"rewardPerDay90",
+      "name":"rewardPerDay60",
       "outputs":[
         {
           "internalType":"uint256",
@@ -535,7 +535,7 @@
           "type":"uint256"
         }
       ],
-      "name":"setRewardPerDay90",
+      "name":"setRewardPerDay60",
       "outputs":[
 
       ],
@@ -651,7 +651,7 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0x6F6F3FC094b5Ad4c6f8cfCbc3fce831b062E5193",
+      "address": "0x095432E4Ba4d632abb43E75Cf2bDD938da00b7dD",
       "transactionHash": "0xe5545ba0adb02815769391c8ebb0d52023ea9562cb639774e680afbe08c36f95"
     }
   }

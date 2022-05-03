@@ -40,7 +40,7 @@ contract MandoXStaking is Ownable, IERC721Receiver, Pausable {
 
     uint256 public rewardPerDay30 = 15000000000;
     uint256 public rewardPerDay45 = 30000000000;
-    uint256 public rewardPerDay90 = 100000000000;
+    uint256 public rewardPerDay60 = 100000000000;
 
     // amount of $Mandox earned so far
     uint256 public totalMandoxEarned;
@@ -79,8 +79,8 @@ contract MandoXStaking is Ownable, IERC721Receiver, Pausable {
             lockTime = block.timestamp + 30 minutes;
         } else if (tier == 45) {
             lockTime = block.timestamp + 45 minutes;
-        } else if (tier == 90) {
-            lockTime = block.timestamp + 90 minutes;
+        } else if (tier == 60) {
+            lockTime = block.timestamp + 60 minutes;
         } else {
             require(false, "Invalid tier");
         }
@@ -123,8 +123,8 @@ contract MandoXStaking is Ownable, IERC721Receiver, Pausable {
             rewards = uint256((block.timestamp - stake.stakeTime) * rewardPerDay30 / 1 minutes);
         } else if (stake.tier == 45) {
             rewards = uint256((block.timestamp - stake.stakeTime) * rewardPerDay45 / 1 minutes);
-        } else if (stake.tier == 90) {
-            rewards = uint256((block.timestamp - stake.stakeTime) * rewardPerDay90 / 1 minutes);
+        } else if (stake.tier == 60) {
+            rewards = uint256((block.timestamp - stake.stakeTime) * rewardPerDay60 / 1 minutes);
         } else {
             require(false, "Invalid Tier");
         }
@@ -189,8 +189,8 @@ contract MandoXStaking is Ownable, IERC721Receiver, Pausable {
         rewardPerDay45 = value;
     }
 
-    function setRewardPerDay90(uint256 value) public onlyOwner{
-        rewardPerDay90= value;
+    function setRewardPerDay60(uint256 value) public onlyOwner{
+        rewardPerDay60= value;
     }
 
     function setRewardingWallet(address _rewardingWallet) public onlyOwner{
